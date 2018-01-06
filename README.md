@@ -1,4 +1,2 @@
-+darknet_ros-release
-+=================
-+
-+release repo for darknet_ros
+# darknet_ros-release
+Release repository for the darknet ros library
