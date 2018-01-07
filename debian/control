@@ -1,0 +1,12 @@
+Source: ros-kinetic-darknet-ros
+Section: misc
+Priority: extra
+Maintainer: Marko Bjelonic <marko.bjelonic@mavt.ethz.ch>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, ros-kinetic-actionlib, ros-kinetic-catkin, ros-kinetic-cv-bridge, ros-kinetic-darknet-ros-msgs, ros-kinetic-image-transport, ros-kinetic-message-generation, ros-kinetic-roscpp, ros-kinetic-rospy, ros-kinetic-rostest, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs
+Homepage: https://bitbucket.org/leggedrobotics/darknet_ros
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-darknet-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, ros-kinetic-actionlib, ros-kinetic-cv-bridge, ros-kinetic-darknet-ros-msgs, ros-kinetic-image-transport, ros-kinetic-message-generation, ros-kinetic-roscpp, ros-kinetic-rospy, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs
+Description: ROS package to use YOLO in ROS.
