@@ -1,0 +1,7 @@
+ros-kinetic-darknet-ros (1.1.2-0xenial) xenial; urgency=high
+
+  * First release of darknet_ros.
+
+ -- Marko Bjelonic <marko.bjelonic@mavt.ethz.ch>  Fri, 05 Jan 2018 23:00:00 -0000
+
+
