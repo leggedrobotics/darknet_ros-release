@@ -1,11 +1,11 @@
 yolo_model:
 
   config_file:
-    name: yolo-voc.cfg
+    name: yolov3-voc.cfg
   weight_file:
-    name: yolo-voc.weights
+    name: yolov3-voc.weights
   threshold:
-    value: 0.5
+    value: 0.3
   detection_classes:
     names:
       - aeroplane
@@ -18,13 +18,13 @@ yolo_model:
       - cat
       - chair
       - cow
-      - dining table
+      - diningtable
       - dog
       - horse
       - motorbike
       - person
-      - potted plant
+      - pottedplant
       - sheep
       - sofa
       - train
-      - tv monitor
+      - tvmonitor

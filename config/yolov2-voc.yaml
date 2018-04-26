@@ -1,17 +1,11 @@
-image_view:
-
-  enable_opencv: true
-  use_darknet: false
-  wait_key_delay: 600
-
 yolo_model:
 
   config_file:
-    name: yolo-voc.cfg
+    name: yolov2-voc.cfg
   weight_file:
-    name: yolo-voc.weights
+    name: yolov2-voc.weights
   threshold:
-    value: 0.5
+    value: 0.3
   detection_classes:
     names:
       - aeroplane
@@ -24,13 +18,13 @@ yolo_model:
       - cat
       - chair
       - cow
-      - dining table
+      - diningtable
       - dog
       - horse
       - motorbike
       - person
-      - potted plant
+      - pottedplant
       - sheep
       - sofa
       - train
-      - tv monitor
+      - tvmonitor
