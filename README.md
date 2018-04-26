@@ -1,8 +1,8 @@
-# YOLO v2 for ROS: Real-Time Object Detection for ROS
+# YOLO V3 for ROS: Real-Time Object Detection for ROS
 
 ## Overview
 
-This is a ROS package developed for object detection in camera images. You only look once (YOLO) is a state-of-the-art, real-time object detection system. In the following ROS package you are able to use YOLO on GPU and CPU. The pre-trained model of the convolutional neural network is able to detect pre-trained classes including the data set from VOC and COCO (e.g. aeroplane, bicycle, bird, boat, bottle, bus, car, cat, chair, cow, dining table, dog, horse, motorbike, person, potted plant, sheep, sofa, train and tv monitor) or you can also create a network with your own detection objects. For more information about YOLO, Darknet, available training data and training YOLO see the following link: [YOLO: Real-Time Object Detection](http://pjreddie.com/darknet/yolo/). Some part of the code is inspired by the work of [pgigioli](https://github.com/pgigioli).
+This is a ROS package developed for object detection in camera images. You only look once (YOLO) is a state-of-the-art, real-time object detection system. In the following ROS package you are able to use YOLO on GPU and CPU. The pre-trained model of the convolutional neural network is able to detect pre-trained classes including the data set from VOC and COCO (e.g. aeroplane, bicycle, bird, boat, bottle, bus, car, cat, chair, cow, dining table, dog, horse, motorbike, person, potted plant, sheep, sofa, train and tv monitor) or you can also create a network with your own detection objects. For more information about YOLO, Darknet, available training data and training YOLO see the following link: [YOLO: Real-Time Object Detection](http://pjreddie.com/darknet/yolo/).
 
 The YOLO packages have been tested under ROS Kinetic and Ubuntu 16.04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.
 
@@ -10,6 +10,7 @@ The YOLO packages have been tested under ROS Kinetic and Ubuntu 16.04. This is r
 
 **Affiliation: Robotic Systems Lab, ETH Zurich**
 
+![Darknet Ros example: Detection image](darknet_ros/doc/test_detection.png)
 
 ## Citing
 
@@ -28,7 +29,9 @@ This software is built on the Robotic Operating System ([ROS]), which needs to b
 
 [![Build Status](https://ci.leggedrobotics.com/buildStatus/icon?job=github_leggedrobotics/darknet_ros/master)](https://ci.leggedrobotics.com/job/github_leggedrobotics/job/darknet_ros/job/master/)
 
-In order to install darknet_ros, clone the latest version from this repository into your catkin workspace and compile the package using ROS.
+In order to install darknet_ros, clone the latest version using SSH (see [how to set up an SSH key](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)) from this repository into your catkin workspace and compile the package using ROS.
+
+
 
     cd catkin_workspace/src
     git clone --recursive git@github.com:leggedrobotics/darknet_ros.git
@@ -52,23 +55,21 @@ This means that you need to check the compute capability (version) of your GPU. 
 
 ### Download weights
 
-The yolo-voc.weights and tiny-yolo-voc.weights are downloaded automatically in the CMakeLists.txt file. If you need to download them again, go into the weights folder and download the two pre-trained weights from the VOC data set:
+The yolo-voc.weights and tiny-yolo-voc.weights are downloaded automatically in the CMakeLists.txt file. If you need to download them again, go into the weights folder and download the two pre-trained weights from the COCO data set:
 
     cd catkin_workspace/src/darknet_ros/darknet_ros/yolo_network_config/weights/
-    wget http://pjreddie.com/media/files/yolo-voc.weights
-    wget http://pjreddie.com/media/files/tiny-yolo-voc.weights
+    wget http://pjreddie.com/media/files/yolov2.weights
+    wget http://pjreddie.com/media/files/yolov2-tiny.weights
 
+And weights from the VOC data set can be found here:
 
-To use the COCO detection objects, you can download the following weights:
+    wget http://pjreddie.com/media/files/yolov2-voc.weights
+    wget http://pjreddie.com/media/files/yolov2-tiny-voc.weights
 
-    cd catkin_workspace/src/darknet_ros/darknet_ros/yolo_network_config/weights/
-    wget http://pjreddie.com/media/files/yolo.weights
-    wget http://pjreddie.com/media/files/tiny-yolo.weights
+And the pre-trained weight from YOLO v3 can be found here:
 
-To use the YOLO9000 detection objects, you can download the following weights:
-
-    cd catkin_workspace/src/darknet_ros/darknet_ros/yolo_network_config/weights/
-    wget http://pjreddie.com/media/files/yolo9000.weights
+    wget http://pjreddie.com/media/files/yolov3-voc.weights
+    wget http://pjreddie.com/media/files/yolov3.weights
 
 ### Use your own detection objects
 
@@ -91,10 +92,7 @@ Run the unit tests using the [Catkin Command Line Tools](http://catkin-tools.rea
 
     catkin build darknet_ros --no-deps --verbose --catkin-make-args run_tests
 
-You will see the following two figures popping up :
-
-![Darknet Ros example: Detection image 1](darknet_ros/doc/dog.png)
-![Darknet Ros example: Detection image 2](darknet_ros/doc/person.png)
+You will see the image above popping up.
 
 ## Basic Usage
 
@@ -143,10 +141,6 @@ You can change the parameters that are related to the detection by adding a new 
 * **`image_view/enable_opencv`** (bool)
 
     Enable or disable the open cv view of the detection image including the bounding boxes.
-
-* **`image_view/use_darknet`** (bool)
-
-    Use the open cv image view from the original darknet algorithm by setting to true or use the on that is implemented in darknet_ros by setting to false.
 
 * **`image_view/wait_key_delay`** (int)
 
