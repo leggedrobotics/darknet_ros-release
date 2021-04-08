@@ -1,3 +1,28 @@
+## darknet_ros (noetic) - 1.1.5-1
+
+The packages in the `darknet_ros` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic --track noetic darknet_ros` on `Thu, 08 Apr 2021 19:28:28 -0000`
+
+These packages were released:
+- `darknet_ros`
+- `darknet_ros_msgs`
+
+Version of package(s) in repository `darknet_ros`:
+
+- upstream repository: https://github.com/leggedrobotics/darknet_ros
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.1.5-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.0`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## darknet_ros (kinetic) - 1.1.4-0
 
 The packages in the `darknet_ros` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release darknet_ros --rosdistro kinetic` on `Sun, 03 Mar 2019 14:39:17 -0000`
