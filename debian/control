@@ -1,0 +1,13 @@
+Source: ros-noetic-darknet-ros
+Section: misc
+Priority: optional
+Maintainer: Marko Bjelonic <marko.bjelonic@mavt.ethz.ch>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, libopencv-dev, libx11-dev, libxext-dev, libxt-dev, ros-noetic-actionlib, ros-noetic-catkin, ros-noetic-cv-bridge, ros-noetic-darknet-ros-msgs, ros-noetic-image-transport, ros-noetic-message-generation, ros-noetic-nodelet, ros-noetic-roscpp, ros-noetic-rospy, ros-noetic-rostest, ros-noetic-sensor-msgs, ros-noetic-std-msgs, wget
+Homepage: https://github.com/leggedrobotics/darknet_ros
+Standards-Version: 3.9.2
+
+Package: ros-noetic-darknet-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, libopencv-dev, libx11-dev, libxext-dev, libxt-dev, ros-noetic-actionlib, ros-noetic-cv-bridge, ros-noetic-darknet-ros-msgs, ros-noetic-image-transport, ros-noetic-message-generation, ros-noetic-nodelet, ros-noetic-roscpp, ros-noetic-rospy, ros-noetic-sensor-msgs, ros-noetic-std-msgs
+Description: Darknet is an open source neural network framework that runs on CPU and GPU.
+ You only look once (YOLO) is a state-of-the-art, real-time object detection system.
