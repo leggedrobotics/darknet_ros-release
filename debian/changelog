@@ -1,0 +1,120 @@
+ros-noetic-darknet-ros (1.1.5-1buster) buster; urgency=high
+
+  * Merge pull request #308 <https://github.com/leggedrobotics/darknet_ros/issues/308> from leggedrobotics/noetic
+    Noetic
+  * Minor fix in CMake.
+  * Minor fix in test.
+  * Updated readme.
+  * Updated to newest darknet and fixed opencv on Ubuntu 20.04.
+  * First changes in CMakeLists.
+  * Merge pull request #287 <https://github.com/leggedrobotics/darknet_ros/issues/287> from leggedrobotics/feature/nodeletize
+    Feature/nodeletize
+  * Small adjustments
+  * Added pointer deletion in destructor and minor formatting
+  * Minor formatting
+  * Adding option to use nodelet
+  * Add libxext
+  * Add libxt-dev
+  * Retrieve binaries from Github releases
+  * Merge pull request #232 <https://github.com/leggedrobotics/darknet_ros/issues/232> from leggedrobotics/add-required-deps
+    Update package.xml dependencies
+  * Don't require cmake-clang-tools
+  * Update package.xml dependencies
+  * Added clang tooling.
+  * Merge pull request #207 <https://github.com/leggedrobotics/darknet_ros/issues/207> from umdlife/install_weights
+    Add install targets for configuration files
+  * Add install targets for configuration files
+    Adds the launch, config, and yolo_network_config folders to the
+    install target for darknet_ros so they are available in the catkin
+    install directory.
+  * Fixed linking of cuda libraries.
+  * Merge branch 'kunaltyagi-cleanup'
+  * Cleaned up CMakeLists.txt, used OpenCV C++ API for cpp file
+  * Merge pull request #189 <https://github.com/leggedrobotics/darknet_ros/issues/189> from martinspedro/master
+    /darknet_ros/found_object uses custom msg with Header for improving synchronization
+  * YOLO publishes Object Count with Time stamp using custom msg with Header
+  * Merge pull request #183 <https://github.com/leggedrobotics/darknet_ros/issues/183> from kunaltyagi/id_num
+    Add numerical ID and launch param for image
+  * Adding numerical ID and launch param for image
+  * Merge pull request #182 <https://github.com/leggedrobotics/darknet_ros/issues/182> from leggedrobotics/fix/image_publisher
+    Fixed copy of image publisher.
+  * Fixed copy of image publisher.
+  * Merge branch 'kjbilton-master'
+  * Increased scope of image acquisition mutex to prevent image overwriting
+  * Merge branch 'utra-robosoccer-master'
+  * Removed warnings caused by catkin builds
+  * Added test_depend of wget to accomodate Jenkins.
+  * Contributors: Jason Wang, Kunal Tyagi, Kyle Bilton, Marko Bjelonic, Pedro Martins, Tom Lankhorst, Tomas Gareau, timonh
+
+ -- Marko Bjelonic <marko.bjelonic@mavt.ethz.ch>  Wed, 07 Apr 2021 22:00:00 -0000
+
+ros-noetic-darknet-ros (1.1.4-1buster) buster; urgency=high
+
+  * Merge pull request #141 <https://github.com/leggedrobotics/darknet_ros/issues/141> from lorenwel/feature/launch_file_arg
+    Added arg for launch file parameter files
+  * Fixed synatx error
+  * Removed unnecessary args
+  * Adapted yolo_v3.launch to new launch file
+  * Added launch file arguments for parameter files
+  * Merge branch 'Texas-Aerial-Robotics-headerFixForUpsteam'
+  * Merge branch 'headerFixForUpsteam' of https://github.com/Texas-Aerial-Robotics/darknet_ros into Texas-Aerial-Robotics-headerFixForUpsteam
+  * Remove unused variable
+  * Merge branch 'headerFixForUpsteam' of https://github.com/Texas-Aerial-Robotics/darknet_ros into Texas-Aerial-Robotics-headerFixForUpsteam
+  * Multithreading mismatched image header fix
+  * Forgot to add image.
+  * Cropped test image.
+  * Changed image for test.
+  * Changed resame image.
+  * Added new images for test.
+  * Removed twice loading of weightfile.
+  * Contributors: Lorenz Wellhausen, Marko Bjelonic, Umer Salman, lorenwel
+
+ -- Marko Bjelonic <marko.bjelonic@mavt.ethz.ch>  Sat, 02 Mar 2019 23:00:00 -0000
+
+ros-noetic-darknet-ros (1.1.3-1buster) buster; urgency=high
+
+  * Fixed iteration through detection boxes.
+  * Merge pull request #80 <https://github.com/leggedrobotics/darknet_ros/issues/80> from leggedrobotics/feature/yolo3
+    Feature/yolo3
+  * Fixed publishers.
+  * Applied first changes for yolo v3.
+  * Updated darknet and added launch files for yolov3.
+  * Merge pull request #73 <https://github.com/leggedrobotics/darknet_ros/issues/73> from leggedrobotics/fix/weights
+    Fix/weights
+  * Fixed weights.
+  * Fix test.
+  * Fixed formatting part 2.
+  * Fixed naming.
+  * Merge branch 'firephinx-master'
+  * Merge branch 'master' of https://github.com/firephinx/darknet_ros into firephinx-master
+  * Merge pull request #62 <https://github.com/leggedrobotics/darknet_ros/issues/62> from warp1337/master
+    Reduced window size to reasonable values
+  * Reduced window size to reasonable values
+  * Added rgb_image_header to BoundingBoxes msg.
+  * Updated to the latest darknet version.
+  * Merge pull request #57 <https://github.com/leggedrobotics/darknet_ros/issues/57> from leggedrobotics/devel/threads
+    Devel/threads
+  * Rearranged.
+  * Fixed action with new threads.
+  * Adapted package description.
+  * Added publisher.
+  * Merge branch 'master' into devel/threads
+  * Rearranged code.
+  * Update package.xml
+  * Fixed image_view if x11 is not running.
+  * COmment runYolo().
+  * Update object_detector_demo.cpp
+  * Changed ros config.
+  * Node is shutting down properly.
+  * Rearranged code and added threads.
+  * Contributors: Kevin Zhang, Marko Bjelonic, fl
+
+ -- Marko Bjelonic <marko.bjelonic@mavt.ethz.ch>  Wed, 25 Apr 2018 22:00:00 -0000
+
+ros-noetic-darknet-ros (1.1.2-1buster) buster; urgency=high
+
+  * First release of darknet_ros.
+
+ -- Marko Bjelonic <marko.bjelonic@mavt.ethz.ch>  Fri, 05 Jan 2018 23:00:00 -0000
+
+
